@@ -4,6 +4,7 @@ import Contacts from "./components/Contacts";
 import TabsSection from "./components/TabsSection";
 import SmthSection from "./components/AboutSection";
 import { useState } from "react";
+import Footer from "./components/footer/Footer";
 
 function App() {
   const [tab, setTab] = useState("main");
@@ -28,6 +29,7 @@ function App() {
           </>
         )}
       </main>
+      <Footer></Footer>
     </>
   );
 }
