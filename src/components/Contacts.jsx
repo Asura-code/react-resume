@@ -27,9 +27,13 @@ export default function Contacts() {
         {!content ? (
           "Press da button"
         ) : (
-          <a href={contacts[content]} target="_blank">
-            {contacts[content]}
-          </a>
+          <span>
+            {" "}
+            Link:{" "}
+            <a href={contacts[content]} target="_blank">
+              {contacts[content]}
+            </a>
+          </span>
         )}
       </p>
     </section>

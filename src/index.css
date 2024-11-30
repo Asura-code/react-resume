@@ -46,7 +46,10 @@ p {
   text-align: center;
 }
 
-
+.kinobox_player{
+  width: 900px;
+  height: 510px;
+  }
 .control {
   border: 1px solid #ccc;
   border-radius: 5px;

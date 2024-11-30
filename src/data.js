@@ -17,7 +17,7 @@ export const ways = [
   {
     title: 'Projects: ',
     description:
-      'https://bankaikino.ru/  , but to open from Russia, you need a VPN :( ',
+      'https://bankaikino.ru/  , it was blocked :( , but you can use the functionality of the player on the Bankai page ',
   },
 ]
 
