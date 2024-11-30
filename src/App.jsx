@@ -11,7 +11,6 @@ import KinoboxPlayer from "./components/KinoboxPlayer";
 
 function App() {
   const [tab, setTab] = useState("main");
-  let lol = 408596;
   const [message, setMessage] = useState("");
 
   const handleChange = (event) => {
@@ -40,7 +39,7 @@ function App() {
         {tab == "bankai" && (
           <>
             <div>
-              <span>Write kinopoisk id: </span>
+              <span>Write kinopoisk/imdb id or name: </span>
               <input
                 type="text"
                 id="message"

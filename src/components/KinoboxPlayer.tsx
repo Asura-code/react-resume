@@ -17,10 +17,51 @@ function KinoboxPlayer({ kpId }: Props) {
     script.onload = () => {
       if (containerRef.current) {
         (window as any).kbox(containerRef.current, {
-          search: { kinopoisk: kpId },
+          search: { query: kpId },
           menu: {
-            enabled: false,
-          }
+            enable: true, 
+            default: 'menu_list',
+            mobile: 'menu_button', 
+            format: '{S} {T} ({Q})', 
+            limit: 5, // Максимальное количество элементов в меню
+            open: false, // Открывать меню по умолчанию
+          },
+          players: {
+
+            Turbo: {
+            enable: true,
+            position: 1
+
+        },
+
+        alloha: {
+            enable: true,
+            position: 2
+
+        },
+        collaps: {
+            enable: true,
+            position: 3
+
+        },
+        kodik: {
+            enable: true,
+            position: 4
+
+        },
+        videocdn: {
+            enable: true,
+            position: 5
+
+        },
+
+
+
+        // ...
+    },
+          
+          notFoundMessage: 'Видео не найдено.',
+          
         });
       }
     };
