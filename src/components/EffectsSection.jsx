@@ -58,6 +58,7 @@ export default function EffectsSection() {
         )}
         {printTrue && (
           <>
+            <p>Find someone:</p>
             <input type="text" className="control" {...input} />
 
             <ul>
