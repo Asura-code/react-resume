@@ -23,8 +23,8 @@ function KinoboxPlayer({ kpId }: Props) {
             default: 'menu_list',
             mobile: 'menu_button', 
             format: '{S} {T} ({Q})', 
-            limit: 5, // Максимальное количество элементов в меню
-            open: false, // Открывать меню по умолчанию
+            limit: 5, 
+            open: false, 
           },
           players: {
 

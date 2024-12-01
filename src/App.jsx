@@ -8,6 +8,7 @@ import Footer from "./components/footer/Footer";
 import AboutSection from "./components/AboutSection";
 import Bankai from "./components/KinoboxPlayer";
 import KinoboxPlayer from "./components/KinoboxPlayer";
+import EffectsSection from "./components/EffectsSection";
 
 function App() {
   const [tab, setTab] = useState("main");
@@ -52,6 +53,8 @@ function App() {
             <KinoboxPlayer kpId={message} />
           </>
         )}
+
+        {tab == "effect" && <EffectsSection />}
       </main>
     </>
   );

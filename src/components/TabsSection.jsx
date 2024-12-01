@@ -15,6 +15,12 @@ export default function TabsSection({ active, onChange }) {
       >
         Bankai
       </Button>
+      <Button
+        isActive={active == "effect"}
+        onClicked={() => onChange("effect")}
+      >
+        useEffect
+      </Button>
     </section>
   );
 }

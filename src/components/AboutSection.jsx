@@ -32,7 +32,7 @@ export default function AboutSection() {
         </li>
       </ul>
 
-      <strong>
+      {/* <strong>
         <h3 style={{ marginBottom: "1rem" }}>Practice with forms</h3>
       </strong>
       <ul>
@@ -61,16 +61,15 @@ export default function AboutSection() {
               <option value="2">2</option>
               <option value="3">3</option>
             </select>
+            <Button
+              disabled={hasError || dsbl == 1}
+              isActive={!hasError || dsbl == 2}
+            >
+              Send
+            </Button>
           </form>
         </li>
-      </ul>
-      <Button
-        disabled={hasError || dsbl == 1}
-        isActive={!hasError || dsbl == 2}
-      >
-        Send
-      </Button>
-      <h1>{name}</h1>
+      </ul> */}
     </section>
   );
 }
