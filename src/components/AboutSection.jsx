@@ -26,7 +26,7 @@ export default function AboutSection() {
         <li>
           <span style={{ marginBottom: "1rem" }}>
             I started learning react and decided to make smth like a resume as
-            my first projectю So here I'm just practicing different things that
+            my first project. So here I'm just practicing different things that
             I'm learning
           </span>
         </li>
