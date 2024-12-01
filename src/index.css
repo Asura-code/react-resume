@@ -22,7 +22,7 @@ a, u {
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-image: url("/public/fon.jpg");
+  background-image: url("/fon.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -60,7 +60,6 @@ p {
 .centered {
   text-align: center;
 }
-
 
 .control {
   border: 1px solid #ccc;
