@@ -15,6 +15,7 @@ export default function EffectsSection() {
   useEffect(() => {
     async function fetchUsers() {
       setLoading(true);
+
       const response = await fetch(
         "https://jsonplaceholder.typicode.com/users"
       );
@@ -24,6 +25,7 @@ export default function EffectsSection() {
     }
     fetchUsers();
   }, []);
+  console.log(loading);
 
   function openModal() {
     setModalOpen(true);
@@ -47,6 +49,12 @@ export default function EffectsSection() {
         </Button>
       </section>
       <section>
+        {loading && (
+          <p>
+            Data is loading. if you see this inscription for more than 8
+            seconds, then the problems are on the server side :)
+          </p>
+        )}
         {printTrue && (
           <ul>
             {users.map((user) => (

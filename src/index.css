@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@400;700&family=Titillium+Web&display=swap');
 
+
+@media only screen and (max-width: 767px) {
+
+  .kinobox_player{
+    width: 100%;
+    height: 100%;
+}
+}
+
+
 a, u {
   text-decoration: none;
 }
@@ -12,6 +22,11 @@ a, u {
 
 body {
   font-family: 'Roboto', sans-serif;
+  background-image: url("/public/fon.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 
@@ -46,10 +61,7 @@ p {
   text-align: center;
 }
 
-.kinobox_player{
-  width: 900px;
-  height: 510px;
-  }
+
 .control {
   border: 1px solid #ccc;
   border-radius: 5px;

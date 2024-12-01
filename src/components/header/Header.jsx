@@ -9,7 +9,7 @@ const HeaderStyle = styled.header`
   padding: 0 2rem;
   align-items: center;
   border-bottom: 1px solid #ccc;
-  background: #fafafa;
+  background: transparent;
 `;
 
 function Header() {

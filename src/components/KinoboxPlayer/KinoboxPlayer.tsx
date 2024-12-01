@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-
 export interface Props {
   kpId: number;
 }

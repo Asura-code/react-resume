@@ -2,14 +2,12 @@ import Header from "./components/header/Header";
 import Whoami from "./components/Whoami";
 import Contacts from "./components/Contacts";
 import TabsSection from "./components/TabsSection";
-import SmthSection from "./components/AboutSection";
 import { useState } from "react";
 import Footer from "./components/footer/Footer";
 import AboutSection from "./components/AboutSection";
-import Bankai from "./components/KinoboxPlayer";
-import KinoboxPlayer from "./components/KinoboxPlayer";
+import KinoboxPlayer from "./components/KinoboxPlayer/KinoboxPlayer";
 import EffectsSection from "./components/EffectsSection";
-
+import "./index.css";
 function App() {
   const [tab, setTab] = useState("main");
   const [message, setMessage] = useState("");
