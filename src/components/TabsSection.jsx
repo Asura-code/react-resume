@@ -6,9 +6,9 @@ export default function TabsSection({ active, onChange }) {
       <Button isActive={active == "main"} onClicked={() => onChange("main")}>
         Main
       </Button>
-      <Button isActive={active == "about"} onClicked={() => onChange("about")}>
+      {/* <Button isActive={active == "about"} onClicked={() => onChange("about")}>
         About
-      </Button>
+      </Button> */}
       <Button
         isActive={active == "bankai"}
         onClicked={() => onChange("bankai")}

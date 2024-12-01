@@ -28,15 +28,11 @@ function App() {
         {tab == "main" && (
           <>
             <Whoami />
+            <AboutSection></AboutSection>
             <Contacts />
           </>
         )}
 
-        {tab == "about" && (
-          <>
-            <AboutSection></AboutSection>
-          </>
-        )}
         {tab == "bankai" && (
           <>
             <div>
