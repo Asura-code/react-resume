@@ -19,7 +19,7 @@ export default function TabsSection({ active, onChange }) {
         isActive={active == "effect"}
         onClicked={() => onChange("effect")}
       >
-        useEffect
+        Shikimori parser
       </Button>
     </section>
   );
