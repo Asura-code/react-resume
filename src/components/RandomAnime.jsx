@@ -41,7 +41,6 @@ export default function RandomAnime() {
     }
     fetchUsers();
   }, []);
-  console.log("lol" + title);
   return (
     <>
       {loading ? (

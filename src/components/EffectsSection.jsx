@@ -25,7 +25,6 @@ export default function EffectsSection() {
     setImage(anime.image.original);
     setLoading(false);
   }
-  console.log(title);
 
   function openModal() {
     setModalOpen(true);
