@@ -61,6 +61,13 @@ p {
   text-align: center;
 }
 
+.border{
+  border-top: 3px solid rgb(72, 120, 111);
+  border-right: 3px solid rgb(72, 120, 111);
+  border-bottom: 3px solid rgb(72, 120, 111);
+  border-left: 3px solid rgb(72, 120, 111);
+}
+
 .control {
   border: 1px solid #ccc;
   border-radius: 5px;

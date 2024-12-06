@@ -45,7 +45,9 @@ function App() {
               />
             </div>
             <br></br>
-            <KinoboxPlayer kpId={message} />
+            <div className="border">
+              <KinoboxPlayer kpId={message} />
+            </div>
             <br></br>
             <RandomAnime></RandomAnime>
           </>
