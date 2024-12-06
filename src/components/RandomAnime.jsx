@@ -33,7 +33,7 @@ export default function RandomAnime() {
       setTitle([
         anime.names.ru,
         anime.description,
-        "https://anilibria.tv/" + anime.posters.medium.url,
+        "https://anilibria.top/" + anime.posters.medium.url,
       ]);
       setGenres(anime.genres);
       setLoading(false);
