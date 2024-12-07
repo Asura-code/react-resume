@@ -1,55 +1,61 @@
 import { useState, useEffect } from "react";
 import Button from "./Button/Button";
+import useInput from "../hooks/useInput";
 
 export default function News() {
+  const input = useInput();
   const [loading, setLoading] = useState(false);
-  const [newsMax, setNewsMax] = useState();
-  const [newsIS, setNewsIS] = useState([]);
+  const [usdIS, setUsdIS] = useState([]);
+  const [eurIS, setEurIS] = useState([]);
+  const [gbpIS, setGbpIS] = useState([]);
   const [printTrue, setPrintTrue] = useState(false);
 
   useEffect(() => {
     async function fetchNews() {
       setLoading(true);
-
       const response = await fetch(
-        "https://hacker-news.firebaseio.com/v0/maxitem.json?print=pretty"
+        "https://api.coindesk.com/v1/bpi/currentprice.json"
       );
-      const maxnews = await response.json();
-      setNewsMax(maxnews);
-      console.log(newsMax);
-
-      const url =
-        "https://hacker-news.firebaseio.com/v0/item/" +
-        String(parseInt(maxnews)) +
-        ".json?print=pretty";
-      const url1 =
-        "https://hacker-news.firebaseio.com/v0/item/" +
-        String(parseInt(maxnews) - 1) +
-        ".json?print=pretty";
-      const url2 =
-        "https://hacker-news.firebaseio.com/v0/item/" +
-        String(parseInt(maxnews) - 2) +
-        ".json?print=pretty";
-      const response2 = await fetch(url);
-      const response3 = await fetch(url1);
-      const response4 = await fetch(url2);
-      console.log(url);
-
-      const news = await response2.json();
-      const news1 = await response3.json();
-      const news2 = await response4.json();
-      console.log(news.title);
-      setNewsIS([news.text, news1.text, news2.text]);
+      const news = await response.json();
+      setUsdIS(news.bpi.USD);
+      setGbpIS(news.bpi.GBP);
+      setEurIS(news.bpi.EUR);
       setLoading(false);
     }
     fetchNews();
   }, []);
-  console.log(newsIS);
+
+  const newsIs = [usdIS, gbpIS, eurIS];
   return (
     <div>
-      <ul>"1: "{newsIS[0]}</ul>
-      <ul>"2: "{newsIS[1]}</ul>
-      <ul>"3: "{newsIS[2]}</ul>
+      {/* <p>bitcoin exchange rate:</p>
+      <input
+        type="text"
+        className="control"
+        {...input}
+        placeholder="print currency here"
+      /> */}
+      {/* {!loading && (
+        <h1>
+          {usdIS.code} : {usdIS.rate}
+        </h1>
+      )} */}
+      {!loading && "bitcoin exchange rate:"}
+      {newsIs
+        // .filter((user) =>
+        //   user.code.toLowerCase().includes(input.value.toLowerCase())
+        // )
+        .map((currency) => (
+          <section>
+            <ul>
+              <li>
+                <p>
+                  {currency.code}:{currency.rate}
+                </p>
+              </li>
+            </ul>
+          </section>
+        ))}
     </div>
   );
 }

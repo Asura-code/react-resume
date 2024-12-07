@@ -9,6 +9,7 @@ import KinoboxPlayer from "./components/KinoboxPlayer/KinoboxPlayer";
 import EffectsSection from "./components/EffectsSection";
 import "./index.css";
 import RandomAnime from "./components/RandomAnime";
+import News from "./components/News";
 function App() {
   const [tab, setTab] = useState("main");
   const [message, setMessage] = useState("");
@@ -53,7 +54,12 @@ function App() {
           </>
         )}
 
-        {tab == "effect" && <EffectsSection />}
+        {tab == "effect" && (
+          <>
+            <EffectsSection />
+            <News></News>
+          </>
+        )}
       </main>
     </>
   );
