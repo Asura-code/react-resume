@@ -10,6 +10,7 @@ import EffectsSection from "./components/EffectsSection";
 import "./index.css";
 import RandomAnime from "./components/RandomAnime";
 import News from "./components/News";
+
 function App() {
   const [tab, setTab] = useState("main");
   const [message, setMessage] = useState("");
