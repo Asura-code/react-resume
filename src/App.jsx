@@ -10,6 +10,7 @@ import EffectsSection from "./components/EffectsSection";
 import "./index.css";
 import RandomAnime from "./components/RandomAnime";
 import News from "./components/News";
+import DescriptionComponent from "./components/DescriptionComponent";
 
 function App() {
   const [tab, setTab] = useState("main");

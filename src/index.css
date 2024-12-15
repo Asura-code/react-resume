@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@400;700&family=Titillium+Web&display=swap');
 
 
+a{
+  display: inline-block;
+}
+img {
+  vertical-align: middle;
+}
+
 @media only screen and (max-width: 767px) {
 
   .kinobox_player{
