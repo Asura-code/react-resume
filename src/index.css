@@ -7,9 +7,9 @@ a{
 img {
   vertical-align: middle;
 }
-.isntPC{
+/* .isntPC{
   visibility: hidden;
-}
+} */
 @media only screen and (max-width: 767px) {
 
   .kinobox_player{
@@ -20,7 +20,7 @@ img {
 
 }
 
-.isPC{
+/* .isPC{
   visibility: visible;
 }
 
@@ -31,10 +31,10 @@ img {
 
   }
   .isntPC{
-    visibility: visible;
-  }
+    visibility: visible; */
+  /* }
 
-}
+} */
 
 
 

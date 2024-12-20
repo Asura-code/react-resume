@@ -22,29 +22,36 @@ function App() {
     setMessage(event.target.value);
   };
 
-  let [size, setSize] = useState(90);
+  let [isPc, setIsPC] = useState();
 
   // const onChange = (checked) => {
   //   alert(`switch to ${checked}`);
   // };
+  function isMobileDevice() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    );
+  }
 
   return (
     <>
       <Header />
       <main>
-        <div className="isntPC">
-          <BurgerSection
-            size1={size}
-            active={tab}
-            onChange={(currentTab) => setTab(currentTab)}
-          ></BurgerSection>
-        </div>
-        <div className="isPC">
+        {isMobileDevice() ? (
+          <>
+            <BurgerSection
+              active={tab}
+              onChange={(currentTab) => setTab(currentTab)}
+            ></BurgerSection>
+            <br></br>
+          </>
+        ) : (
           <TabsSection
             active={tab}
             onChange={(currentTab) => setTab(currentTab)}
           />
-        </div>
+        )}
+
         {tab == "main" && (
           <>
             <Whoami />
