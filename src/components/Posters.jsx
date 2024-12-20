@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import SegmentSection from "./SegmentSection";
+import SegmentSection from "./BurgerSection";
 
 const DivStyle = styled.div`
   @keyframes scale {

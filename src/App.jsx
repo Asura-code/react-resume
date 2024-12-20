@@ -11,7 +11,8 @@ import "./index.css";
 import RandomAnime from "./components/RandomAnime";
 import News from "./components/News";
 import DescriptionComponent from "./components/DescriptionComponent";
-import SegmentSection from "./components/SegmentSection";
+import SegmentSection from "./components/BurgerSection";
+import BurgerSection from "./components/BurgerSection";
 
 function App() {
   const [tab, setTab] = useState("main");
@@ -21,18 +22,29 @@ function App() {
     setMessage(event.target.value);
   };
 
-  const onChange = (checked) => {
-    alert(`switch to ${checked}`);
-  };
+  let [size, setSize] = useState(90);
+
+  // const onChange = (checked) => {
+  //   alert(`switch to ${checked}`);
+  // };
 
   return (
     <>
       <Header />
       <main>
-        <TabsSection
-          active={tab}
-          onChange={(currentTab) => setTab(currentTab)}
-        />
+        <div className="isntPC">
+          <BurgerSection
+            size1={size}
+            active={tab}
+            onChange={(currentTab) => setTab(currentTab)}
+          ></BurgerSection>
+        </div>
+        <div className="isPC">
+          <TabsSection
+            active={tab}
+            onChange={(currentTab) => setTab(currentTab)}
+          />
+        </div>
         {tab == "main" && (
           <>
             <Whoami />

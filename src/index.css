@@ -7,14 +7,36 @@ a{
 img {
   vertical-align: middle;
 }
-
+.isntPC{
+  visibility: hidden;
+}
 @media only screen and (max-width: 767px) {
 
   .kinobox_player{
     width: 100%;
     height: 100%;
+    
 }
+
 }
+
+.isPC{
+  visibility: visible;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .isPC{
+    visibility: hidden;
+
+  }
+  .isntPC{
+    visibility: visible;
+  }
+
+}
+
+
 
 
 a, u {
