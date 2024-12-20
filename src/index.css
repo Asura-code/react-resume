@@ -29,11 +29,12 @@ a, u {
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-image: url("/fon.jpg");
+  background-color: #f9f9f9;
+  /* background-image: url("/fon.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;
+  background-size: cover; */
 }
 
 

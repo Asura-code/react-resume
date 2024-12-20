@@ -1,20 +1,28 @@
 import { ways } from "../data";
 import Posters from "./Posters";
+import styled from "styled-components";
+import SegmentSection from "./SegmentSection";
+
+const DivStyle = styled.div`
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+`;
 
 export default function Whoami() {
   return (
-    <section>
+    <>
       <h3>Whoami</h3>
 
-      <ul>
-        {ways.map((way) => (
-          <Posters key={way.title} {...way} />
-        ))}
-        {/* <Posters title={ways[0].title} description={ways[0].description} />
-          <Posters {...ways[1]} />
-          <Posters {...ways[2]} />
-          <Posters {...ways[3]} /> */}
-      </ul>
-    </section>
+      <section>
+        <ul>
+          {ways.map((way) => (
+            <DivStyle>
+              <Posters key={way.title} {...way}></Posters>
+            </DivStyle>
+          ))}
+        </ul>
+      </section>
+    </>
   );
 }

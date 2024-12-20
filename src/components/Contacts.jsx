@@ -1,6 +1,7 @@
 import Button from "./Button/Button";
 import { contacts } from "../data";
 import { useState } from "react";
+import { GithubFilled, GithubOutlined } from "@ant-design/icons";
 
 export default function Contacts() {
   const [content, setContent] = useState(null);
@@ -11,19 +12,35 @@ export default function Contacts() {
   return (
     <section>
       <h3>Contacts:</h3>
-      <Button
+      <a href={contacts["github"]} target="_blank">
+        <img
+          src="https://polygon.readthedocs.io/en/latest/_images/github_logo.png"
+          style={{ width: "100px", height: "50px" }}
+          alt="github"
+        />
+      </a>
+
+      <a href={contacts["telegram"]} target="_blank">
+        <img
+          src="https://static.insales-cdn.com/files/1/526/34144782/original/%D1%82%D0%B5%D0%BB%D0%B5%D0%B3%D0%B0_1711971983493-1711971987606.png"
+          style={{ width: "100px", height: "50px" }}
+          alt="telegram"
+        />
+      </a>
+
+      {/* <Button
         isActive={content == "github"}
         onClicked={() => handleClick("github")}
       >
-        github
-      </Button>
-      <Button
+        
+      </Button> */}
+      {/* <Button
         isActive={content == "telegram"}
         onClicked={() => handleClick("telegram")}
       >
         telegram
-      </Button>
-      <p>
+      </Button> */}
+      {/* <p>
         {!content ? (
           "Press da button"
         ) : (
@@ -35,7 +52,7 @@ export default function Contacts() {
             </a>
           </span>
         )}
-      </p>
+      </p> */}
     </section>
   );
 }

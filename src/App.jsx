@@ -11,6 +11,7 @@ import "./index.css";
 import RandomAnime from "./components/RandomAnime";
 import News from "./components/News";
 import DescriptionComponent from "./components/DescriptionComponent";
+import SegmentSection from "./components/SegmentSection";
 
 function App() {
   const [tab, setTab] = useState("main");
@@ -19,6 +20,11 @@ function App() {
   const handleChange = (event) => {
     setMessage(event.target.value);
   };
+
+  const onChange = (checked) => {
+    alert(`switch to ${checked}`);
+  };
+
   return (
     <>
       <Header />

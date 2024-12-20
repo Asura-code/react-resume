@@ -13,7 +13,9 @@
     "antd": "^5.22.4",
     "cors": "^2.8.5",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.10.7",
     "react-dom": "^18.2.0",
+    "semantic-ui-react": "^2.1.5",
     "styled-components": "^6.1.13"
   },
   "devDependencies": {
