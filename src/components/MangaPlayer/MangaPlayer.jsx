@@ -54,7 +54,7 @@ export default function MangaPlayer() {
         </button>
         <img
           src={
-            "public/images/glava" + String(glava) + "/" + String(page) + ".jfif"
+            "public/images/glava" + String(glava) + "/" + String(page) + ".jpg"
           }
           alt="lol"
           style={
