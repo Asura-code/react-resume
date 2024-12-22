@@ -53,7 +53,13 @@ export default function MangaPlayer() {
           </Space>
         </button>
         <img
-          src={"public" + "/" + String(page) + ".jpg"}
+          src={
+            "https://github.com/Asura-code/react-resume/blob/main/public/images/glava" +
+            String(glava) +
+            "/" +
+            String(page) +
+            ".jpg?raw=true"
+          }
           alt="lol"
           style={
             isMobileDevice()
