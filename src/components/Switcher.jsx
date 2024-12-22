@@ -7,11 +7,11 @@ import {
 import { Menu } from "antd";
 import { act } from "react";
 
-export default function BurgerSection({ active, onChange }) {
+export default function Switcher({ active, onChange }) {
   const items = [
     {
       key: "sub1",
-      label: "menu",
+      label: "Главы",
       icon: <AppstoreOutlined />,
       children: [
         {
@@ -19,16 +19,12 @@ export default function BurgerSection({ active, onChange }) {
           type: "group",
           children: [
             {
-              key: "main",
-              label: "Main",
+              key: "1",
+              label: "Глава 1",
             },
             {
-              key: "bankai",
-              label: "Bankai",
-            },
-            {
-              key: "effect",
-              label: "Manga Player",
+              key: "2",
+              label: "Глава 2",
             },
           ],
         },
@@ -44,16 +40,18 @@ export default function BurgerSection({ active, onChange }) {
   };
 
   return (
-    <Menu
-      onClick={onClick}
-      style={{
-        width: 150,
-      }}
-      defaultSelectedKeys={[active]}
-      mode="inline"
-      items={items}
-      theme="light"
-      triggerSubMenuAction="click"
-    />
+    <>
+      <Menu
+        onClick={onClick}
+        style={{
+          width: 140,
+        }}
+        defaultSelectedKeys={[active]}
+        mode="inline"
+        items={items}
+        theme="dark"
+        triggerSubMenuAction="click"
+      />
+    </>
   );
 }

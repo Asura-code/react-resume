@@ -13,6 +13,9 @@ import News from "./components/News";
 import DescriptionComponent from "./components/DescriptionComponent";
 import SegmentSection from "./components/BurgerSection";
 import BurgerSection from "./components/BurgerSection";
+import MangaPlayer from "./components/MangaPlayer/MangaPlayer";
+import { Switch } from "antd";
+import Switcher from "./components/Switcher";
 
 function App() {
   const [tab, setTab] = useState("main");
@@ -83,8 +86,10 @@ function App() {
 
         {tab == "effect" && (
           <>
-            <EffectsSection />
-            <News></News>
+            {/* <EffectsSection />
+            <News></News> */}
+
+            <MangaPlayer></MangaPlayer>
           </>
         )}
       </main>
