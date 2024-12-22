@@ -53,7 +53,7 @@ export default function MangaPlayer() {
           </Space>
         </button>
         <img
-          src={"public" + "/" + String(page) + ".jpg"}
+          src={"/public/images/glava" + String(glava) + ".jpg"}
           alt="lol"
           style={
             isMobileDevice()
