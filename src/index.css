@@ -127,10 +127,10 @@ p {
 }
 
 .border{
-  border-top: 3px solid rgb(72, 120, 111);
-  border-right: 3px solid rgb(72, 120, 111);
-  border-bottom: 3px solid rgb(72, 120, 111);
-  border-left: 3px solid rgb(72, 120, 111);
+  border-top: 3px solid rgb(145, 138, 5);
+  border-right: 3px solid rgb(145, 138, 5);
+  border-bottom: 3px solid rgb(133, 129, 6);
+  border-left: 3px solid rgb(133, 129, 6);
 }
 
 .control {
