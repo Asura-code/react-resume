@@ -17,9 +17,11 @@ import MangaPlayer from "./components/MangaPlayer/MangaPlayer";
 import { Switch } from "antd";
 import Switcher from "./components/Switcher";
 import styled from "styled-components";
+import useInput from "./hooks/useInput";
+import Bankai from "./components/Bankai";
 
-function App() {
-  let [wallpaper, setWallpaper] = useState("");
+export default function App() {
+  let input = useInput();
 
   const [tab, setTab] = useState("main");
   const [message, setMessage] = useState("");
@@ -28,9 +30,14 @@ function App() {
     setMessage(event.target.value);
   };
 
-  let [isPc, setIsPC] = useState();
+  function find(lol) {
+    setMessage(lol);
+  }
 
-  let DivStyle = styled.div`
+  let [isPc, setIsPC] = useState();
+  let [wallpaper, setWallpaper] = useState("");
+
+  const DivStyle = styled.div`
     background-image: url(${wallpaper});
     background-position: center center;
     background-repeat: no-repeat;
@@ -83,40 +90,7 @@ function App() {
             </>
           )}
 
-          {tab == "bankai" && (
-            <>
-              <div className="Bankai">
-                <div>
-                  <span>Write kinopoisk/imdb id or name: </span>
-                  <input
-                    type="text"
-                    id="message"
-                    name="message"
-                    onChange={handleChange}
-                    value={message}
-                  />
-                </div>
-                <br></br>
-                <div className="border">
-                  <KinoboxPlayer kpId={message} />
-                </div>
-                <br></br>
-
-                <RandomAnime></RandomAnime>
-                <br></br>
-                <div style={{ visibility: "hidden" }}>
-                  <h1>lkjnl</h1>
-                  <h1>lkjnl</h1>
-                  <h1>lkjnl</h1>
-                  <h1>lkjnl</h1>
-                  <h1>lkjnl</h1>
-                  <h1>lkjnl</h1>
-                  <h1>lkjnl</h1>
-                  <h1>lkjnl</h1>
-                </div>
-              </div>
-            </>
-          )}
+          {tab == "bankai" && <Bankai></Bankai>}
 
           {tab == "effect" && (
             <>
@@ -131,5 +105,3 @@ function App() {
     </>
   );
 }
-
-export default App;
