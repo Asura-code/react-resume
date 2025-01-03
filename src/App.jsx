@@ -16,8 +16,11 @@ import BurgerSection from "./components/BurgerSection";
 import MangaPlayer from "./components/MangaPlayer/MangaPlayer";
 import { Switch } from "antd";
 import Switcher from "./components/Switcher";
+import styled from "styled-components";
 
 function App() {
+  let [wallpaper, setWallpaper] = useState("");
+
   const [tab, setTab] = useState("main");
   const [message, setMessage] = useState("");
 
@@ -26,6 +29,14 @@ function App() {
   };
 
   let [isPc, setIsPC] = useState();
+
+  let DivStyle = styled.div`
+    background-image: url(${wallpaper});
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  `;
 
   // const onChange = (checked) => {
   //   alert(`switch to ${checked}`);
@@ -38,61 +49,81 @@ function App() {
 
   return (
     <>
-      <Header />
-      <main>
-        {isMobileDevice() ? (
-          <>
-            <BurgerSection
-              active={tab}
-              onChange={(currentTab) => setTab(currentTab)}
-            ></BurgerSection>
-            <br></br>
-          </>
-        ) : (
-          <TabsSection
-            active={tab}
-            onChange={(currentTab) => setTab(currentTab)}
-          />
-        )}
+      <DivStyle>
+        <Header />
 
-        {tab == "main" && (
-          <>
-            <Whoami />
-            <AboutSection></AboutSection>
-            <Contacts />
-          </>
-        )}
-
-        {tab == "bankai" && (
-          <>
-            <div>
-              <span>Write kinopoisk/imdb id or name: </span>
-              <input
-                type="text"
-                id="message"
-                name="message"
-                onChange={handleChange}
-                value={message}
+        <main>
+          {isMobileDevice() ? (
+            <>
+              <BurgerSection
+                active={tab}
+                onChange={(currentTab) => setTab(currentTab)}
+              ></BurgerSection>
+              <br></br>
+            </>
+          ) : (
+            <div className="Tabs">
+              <TabsSection
+                active={tab}
+                onChange={(currentTab) => setTab(currentTab)}
+                onChangeWallpaper={(currWallpaper) =>
+                  setWallpaper(currWallpaper)
+                }
               />
             </div>
-            <br></br>
-            <div className="border">
-              <KinoboxPlayer kpId={message} />
-            </div>
-            <br></br>
-            <RandomAnime></RandomAnime>
-          </>
-        )}
+          )}
 
-        {tab == "effect" && (
-          <>
-            {/* <EffectsSection />
+          {tab == "main" && (
+            <>
+              <div className="Main">
+                <Whoami />
+                <AboutSection></AboutSection>
+                <Contacts />
+              </div>
+            </>
+          )}
+
+          {tab == "bankai" && (
+            <>
+              <div className="Bankai">
+                <div>
+                  <span>Write kinopoisk/imdb id or name: </span>
+                  <input
+                    type="text"
+                    id="message"
+                    name="message"
+                    onChange={handleChange}
+                    value={message}
+                  />
+                </div>
+                <br></br>
+                <div className="border">
+                  <KinoboxPlayer kpId={message} />
+                </div>
+                <br></br>
+
+                <RandomAnime></RandomAnime>
+                <br></br>
+                <div style={{ visibility: "hidden" }}>
+                  <h1>lkjnl</h1>
+                  <h1>lkjnl</h1>
+                  <h1>lkjnl</h1>
+                  <h1>lkjnl</h1>
+                </div>
+              </div>
+            </>
+          )}
+
+          {tab == "effect" && (
+            <>
+              {/* <EffectsSection />
             <News></News> */}
 
-            <MangaPlayer></MangaPlayer>
-          </>
-        )}
-      </main>
+              <MangaPlayer></MangaPlayer>
+            </>
+          )}
+        </main>
+      </DivStyle>
     </>
   );
 }

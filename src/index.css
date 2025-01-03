@@ -60,10 +60,19 @@ body {
 }
 
 
-main {
+.Main {
   max-width: 850px;
   margin: 0 auto;
-  padding: 1rem;
+}
+
+.Bankai {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.Tabs {
+  max-width: 850px;
+  margin: 0 auto;
   padding-top: 2rem;
 }
 
