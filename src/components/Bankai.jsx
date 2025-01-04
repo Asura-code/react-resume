@@ -62,7 +62,7 @@ export default function Bankai() {
         <br></br>
         {/* <EffectsSection></EffectsSection> */}
 
-        <RandomAnime></RandomAnime>
+        {/* <RandomAnime></RandomAnime> */}
 
         <br></br>
 
