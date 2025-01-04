@@ -3,6 +3,7 @@ import KinoboxPlayer from "./KinoboxPlayer/KinoboxPlayer";
 import RandomAnime from "./RandomAnime";
 import { Button, Modal } from "antd";
 import ModalWindowInfo from "./ModalWindowInfo";
+import styled from "styled-components";
 
 export default function Bankai() {
   function isMobileDevice() {
@@ -34,16 +35,18 @@ export default function Bankai() {
       <div className="Bankai">
         <div class="text-field">
           <label className="text-field__label">
-            Write kinopoisk/imdb id or name:
+            <p> Write kinopoisk/imdb id or name ↓</p>
           </label>
           <input
             onChange={handleChange}
             value={message}
             className="text-field__input"
-            placeholder="kinopoisk/imdb id or name"
+            placeholder="kinopoisk/imdb id or name:"
             autocomplete="off"
           />{" "}
-          <ModalWindowInfo></ModalWindowInfo>
+          <div style={{ display: "inline-block", paddingLeft: "50px" }}>
+            <ModalWindowInfo></ModalWindowInfo>
+          </div>
         </div>
 
         <br></br>
@@ -58,7 +61,9 @@ export default function Bankai() {
         )}
         <br></br>
         {/* <EffectsSection></EffectsSection> */}
+
         <RandomAnime></RandomAnime>
+
         <br></br>
 
         <div style={{ visibility: "hidden" }}>

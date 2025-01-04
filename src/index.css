@@ -74,6 +74,10 @@ body {
   margin-bottom: 0.25rem;
 }
 
+.letsDoHover:hover{
+  color: red;
+}
+
 .text-field__input {
   display: inline-block;
   width: 80%;
@@ -88,9 +92,10 @@ body {
 
   color: #0b8926;
   background-color: #0e0900;
+  
 
   background-clip: padding-box;
-  border: 1px solid #bdbdbd;
+  border: 1px solid #888a88;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }

@@ -5,7 +5,6 @@ import styled from "styled-components";
 const PStyle = styled.p`
   @import url("https://fonts.googleapis.com/css?family=Source+Code+Pro");
   p {
-    border-right: solid 3px transparent;
     white-space: nowrap;
     overflow: hidden;
     font-family: "Source Code Pro", monospace;
@@ -56,19 +55,6 @@ export default function ModalWindowInfo() {
 
   return (
     <>
-      <Button
-        type="primary"
-        onClick={showModal}
-        style={{
-          display: "inline-block",
-          backgroundColor: "#0b8926",
-          fontSize: "1rem",
-          fontWeight: "400",
-          height: "calc(2.25rem + 2px)",
-        }}
-      >
-        instruction
-      </Button>
       <ConfigProvider
         theme={{
           components: {
@@ -81,9 +67,30 @@ export default function ModalWindowInfo() {
               colorIcon: "#0b8926",
               colorIconHover: "red",
             },
+            Button: {
+              defaultColor: "white",
+              defaultBg: "#0b8926",
+              defaultHoverBg: "#08691d;",
+              defaultBorderColor: "#0b8926",
+              defaultHoverBorderColor: "#09661d",
+              defaultHoverColor: "#bdbdbd",
+            },
           },
         }}
       >
+        <Button
+          onClick={showModal}
+          style={{
+            display: "inline-block",
+            // backgroundColor: "#0b8926",
+            fontSize: "1rem",
+            fontWeight: "400",
+            height: "calc(2.25rem + 2px)",
+          }}
+        >
+          instruction
+        </Button>
+
         <Modal
           footer={""}
           title="How to use it"

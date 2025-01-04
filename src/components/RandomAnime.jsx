@@ -102,7 +102,10 @@ export default function RandomAnime() {
   return (
     <>
       {loading ? (
-        "The request has been sent to the server, the response will be a random anime"
+        <p>
+          The request has been sent to the server, the response will be a random
+          anime
+        </p>
       ) : (
         <div>
           <Button onClicked={printLi} isRandom={true}>
