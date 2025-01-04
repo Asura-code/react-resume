@@ -30,8 +30,9 @@ export default function App() {
     setMessage(event.target.value);
   };
 
-  function find(lol) {
-    setMessage(lol);
+  function handleOnHeaderClick() {
+    setTab("main");
+    setWallpaper("");
   }
 
   let [isPc, setIsPC] = useState();
@@ -57,7 +58,9 @@ export default function App() {
   return (
     <>
       <DivStyle>
-        <Header />
+        <div onClick={() => handleOnHeaderClick()}>
+          <Header />
+        </div>
 
         <main>
           {isMobileDevice() ? (

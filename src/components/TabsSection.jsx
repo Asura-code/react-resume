@@ -5,9 +5,12 @@ export default function TabsSection({ active, onChange, onChangeWallpaper }) {
     onChange(tabIs);
     onChangeWallpaper(wallpaperIs);
   }
+  console.log("llol: ", active);
+  let randomIs = active == "bankai" ? true : false;
   return (
     <section style={{ marginBottom: "1rem" }}>
       <Button
+        isRandom={randomIs}
         isActive={active == "main"}
         onClicked={() => onClicked1("main", "")}
       >
@@ -18,12 +21,14 @@ export default function TabsSection({ active, onChange, onChangeWallpaper }) {
       </Button> */}
 
       <Button
+        isRandom={false}
         isActive={active == "bankai"}
-        onClicked={() => onClicked1("bankai", "2.jpg")}
+        onClicked={() => onClicked1("bankai", "4.jpg")}
       >
         Bankai
       </Button>
       <Button
+        isRandom={randomIs}
         isActive={active == "effect"}
         onClicked={() => onClicked1("effect", "")}
       >

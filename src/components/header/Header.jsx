@@ -17,8 +17,12 @@ function Header() {
   // setInterval(() => setNow(new Date()));
   return (
     <HeaderStyle>
-      <img src={logo} alt="" style={{ width: "50px", height: "50px" }} />
-      <h1>Asura</h1>
+      <img
+        src={logo}
+        alt=""
+        style={{ width: "50px", height: "50px", cursor: "pointer" }}
+      />
+      <h1 style={{ cursor: "pointer" }}>Asura</h1>
       {/* <h3>Resume</h3> */}
 
       {/* <span>Smth dynamic: {now.toLocaleTimeString()} </span> */}

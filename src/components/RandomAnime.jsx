@@ -104,9 +104,11 @@ export default function RandomAnime() {
       {loading ? (
         "The request has been sent to the server, the response will be a random anime"
       ) : (
-        <Button onClicked={printLi}>
-          {!printTrue ? "Get random anime" : "Hide"}
-        </Button>
+        <div>
+          <Button onClicked={printLi} isRandom={true}>
+            {!printTrue ? "Get random anime" : "Hide"}
+          </Button>
+        </div>
       )}
       {/* <div>
         <ul>
