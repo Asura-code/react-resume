@@ -62,14 +62,14 @@ export default function Bankai() {
         <br></br>
 
         <div style={{ visibility: "hidden" }}>
-          <h1>lkjnl</h1>
-          <h1>lkjnl</h1>
-          <h1>lkjnl</h1>
-          <h1>lkjnl</h1>
-          <h1>lkjnl</h1>
-          <h1>lkjnl</h1>
-          <h1>lkjnl</h1>
-          <h1>lkjnl</h1>
+          <h1>Костыль</h1>
+          <h1>Костыль</h1>
+          <h1>Костыль</h1>
+          <h1>Костыль</h1>
+          <h1>Костыль</h1>
+          <h1>Костыль</h1>
+          <h1>Костыль</h1>
+          <h1>Костыль</h1>
         </div>
       </div>
     </>
