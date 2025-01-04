@@ -103,7 +103,7 @@ body {
 
 
 .Bankai {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   max-width: 850px; 
   margin: 0 auto;
 }

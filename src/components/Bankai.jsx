@@ -5,6 +5,12 @@ import { Button, Modal } from "antd";
 import ModalWindowInfo from "./ModalWindowInfo";
 
 export default function Bankai() {
+  function isMobileDevice() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    );
+  }
+
   const [message, setMessage] = useState("");
 
   const handleChange = (event) => {
@@ -41,9 +47,15 @@ export default function Bankai() {
         </div>
 
         <br></br>
-        <div className="border">
-          <KinoboxPlayer kpId={message} />
-        </div>
+        {message || isMobileDevice() ? (
+          <div className="border">
+            <KinoboxPlayer kpId={message} />
+          </div>
+        ) : (
+          <div className="border">
+            <img src="tenor.gif" style={{ width: "845px", height: "475px" }} />
+          </div>
+        )}
         <br></br>
         {/* <EffectsSection></EffectsSection> */}
         <RandomAnime></RandomAnime>
