@@ -1,11 +1,15 @@
 import Button from "./Button/Button";
 
+// export default function TabsSection() {
+//   return <Tabs defaultActiveKey="1" items={items} onChange={onChange} />;
+// }
+
 export default function TabsSection({ active, onChange, onChangeWallpaper }) {
   function onClicked1(tabIs, wallpaperIs) {
     onChange(tabIs);
     onChangeWallpaper(wallpaperIs);
   }
-  console.log("llol: ", active);
+
   let randomIs = active == "bankai" ? true : false;
   return (
     <section style={{ marginBottom: "1rem" }}>

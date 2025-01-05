@@ -19,6 +19,7 @@ import Switcher from "./components/Switcher";
 import styled from "styled-components";
 import useInput from "./hooks/useInput";
 import Bankai from "./components/Bankai";
+import NewTabSection from "./components/NewTabSection";
 
 export default function App() {
   let input = useInput();
@@ -63,7 +64,15 @@ export default function App() {
         </div>
 
         <main>
-          {isMobileDevice() ? (
+          <div className="Tabs">
+            <NewTabSection
+              active={tab}
+              onChange2={(c) => setTab(c)}
+              onChange3={(c) => setWallpaper(c)}
+            ></NewTabSection>
+          </div>
+
+          {/* {isMobileDevice() ? (
             <>
               <BurgerSection
                 active={tab}
@@ -72,16 +81,30 @@ export default function App() {
               <br></br>
             </>
           ) : (
-            <div className="Tabs">
-              <TabsSection
+            <div className="Tabs"> */}
+          {/* <TabsSection
                 active={tab}
                 onChange={(currentTab) => setTab(currentTab)}
                 onChangeWallpaper={(currWallpaper) =>
                   setWallpaper(currWallpaper)
                 }
-              />
-            </div>
-          )}
+              /> */}
+          {/* <NewTabSection
+                onChange2={(currentTab) => setTab(currentTab)}
+              ></NewTabSection> */}
+          {/* <Tabs
+                defaultActiveKey={tab}
+                items={items}
+                onTabClick={onChangeTab}
+              /> */}
+
+          {/* <NewTabSection
+                active={tab}
+                onChange2={(c) => setTab(c)}
+                onChange3={(c) => setWallpaper(c)}
+              ></NewTabSection>
+            </div> */}
+          {/* )} */}
 
           {tab == "main" && (
             <>
@@ -97,10 +120,13 @@ export default function App() {
 
           {tab == "effect" && (
             <>
-              {/* <EffectsSection />
-            <News></News> */}
+              <div className="Bankai">
+                <EffectsSection />
+                <News></News>
+                <RandomAnime></RandomAnime>
+              </div>
 
-              <MangaPlayer></MangaPlayer>
+              {/* <MangaPlayer></MangaPlayer> */}
             </>
           )}
         </main>

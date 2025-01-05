@@ -33,7 +33,7 @@ export default function Bankai() {
   return (
     <>
       <div className="Bankai">
-        <div class="text-field">
+        <div className="text-field">
           <label className="text-field__label">
             <p> Write kinopoisk/imdb id or name ↓</p>
           </label>

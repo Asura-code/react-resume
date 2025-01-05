@@ -32,7 +32,7 @@ export default function EffectsSection() {
   return (
     <>
       <section style={{ marginBottom: "1rem" }}>
-        <h3>Modal window + parsing</h3>
+        {/* <h3>Modal window + parsing</h3>
 
         <Button onClicked={openModal}>Info</Button>
         <Modal open={modalOpen}>
@@ -42,7 +42,7 @@ export default function EffectsSection() {
             shikimori by id that user pasted
           </p>
           <Button onClicked={() => setModalOpen(false)}>Exit</Button>
-        </Modal>
+        </Modal> */}
         <p>Find:</p>
         <input
           type="text"
