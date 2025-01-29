@@ -3,7 +3,6 @@ export interface Props {
   kpId: number;
 }
 
-
 function KinoboxPlayer({ kpId }: Props) {
   const containerRef = useRef(null);
 
@@ -18,55 +17,45 @@ function KinoboxPlayer({ kpId }: Props) {
         (window as any).kbox(containerRef.current, {
           search: { query: kpId },
           menu: {
-            enable: true, 
-            default: 'menu_list',
-            mobile: 'menu_button', 
-            format: '{S} {T} ({Q})', 
-            limit: 5, 
-            open: false, 
+            enable: true,
+            default: "menu_list",
+            mobile: "menu_button",
+            format: "{S} {T} ({Q})",
+            limit: 5,
+            open: false,
           },
           players: {
+            alloha: {
+              enable: true,
+              position: 1,
+            },
 
             Turbo: {
-            enable: true,
-            position: 1
+              enable: true,
+              position: 2,
+            },
+            collaps: {
+              enable: true,
+              position: 3,
+            },
+            kodik: {
+              enable: true,
+              position: 4,
+            },
+            videocdn: {
+              enable: true,
+              position: 5,
+            },
 
-        },
+            // ...
+          },
 
-        alloha: {
-            enable: true,
-            position: 2
-
-        },
-        collaps: {
-            enable: true,
-            position: 3
-
-        },
-        kodik: {
-            enable: true,
-            position: 4
-
-        },
-        videocdn: {
-            enable: true,
-            position: 5
-
-        },
-
-
-
-        // ...
-    },
-          
-          notFoundMessage: 'Видео не найдено.',
-          
+          notFoundMessage: "Видео не найдено.",
         });
       }
     };
 
     return () => {
-      
       try {
         document.body.removeChild(script);
       } catch (e) {}
