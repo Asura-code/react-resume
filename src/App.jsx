@@ -22,9 +22,12 @@ import Bankai from "./components/Bankai";
 import NewTabSection from "./components/NewTabSection";
 
 export default function App() {
+  let s = window.location.href;
+  let res = s.indexOf("lol") !== -1;
+  console.log(s);
   let input = useInput();
 
-  const [tab, setTab] = useState("main");
+  const [tab, setTab] = useState(!res ? "main" : "bankai");
   const [message, setMessage] = useState("");
 
   const handleChange = (event) => {
@@ -37,7 +40,7 @@ export default function App() {
   }
 
   let [isPc, setIsPC] = useState();
-  let [wallpaper, setWallpaper] = useState("");
+  let [wallpaper, setWallpaper] = useState(!res ? "" : "4.jpg");
 
   const DivStyle = styled.div`
     background-image: url(${wallpaper});

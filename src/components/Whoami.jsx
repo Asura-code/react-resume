@@ -23,6 +23,13 @@ export default function Whoami() {
           ))}
         </ul>
       </section>
+      {/* 
+      <a href="https://wakatime.com/@7711bfae-f8eb-44a2-86e5-f1a922a4db4d">
+        <img
+          src="https://wakatime.com/badge/user/7711bfae-f8eb-44a2-86e5-f1a922a4db4d.svg"
+          alt="Total time coded since Jun 2 2024"
+        />
+      </a> */}
     </>
   );
 }

@@ -11,8 +11,21 @@ export default function Bankai() {
       navigator.userAgent
     );
   }
+  let s = window.location.href;
+  let redirect = s.indexOf("lol") !== -1;
+  let res = s.indexOf("#");
+  console.log("res: " + res);
+  let result = "";
+  for (let i = res + 4; i < 2000; i++) {
+    if (s[i] != "#") {
+      result += s[i];
+    } else {
+      break;
+    }
+  }
+  console.log("lol" + result);
 
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState(redirect ? result : "");
 
   const handleChange = (event) => {
     setMessage(event.target.value);
