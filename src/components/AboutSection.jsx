@@ -67,7 +67,7 @@ export default function AboutSection({ project }) {
             {project == "Bankai Kino" ? (
               <div class="container">
                 <p class="text">
-                  I had an online movie theater bankaikino.ru but it was blocked
+                  i had an online movie theater bankaikino.ru but it was blocked
                   :(. But you can test the functionality of the player on the
                   Bankai page.
                 </p>
