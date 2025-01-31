@@ -67,7 +67,7 @@ export default function AboutSection({ project }) {
             {project == "Bankai Kino" ? (
               <div class="container">
                 <p class="text">
-                  i had an online movie theater bankaikino.ru but it was blocked
+                  I had an online movie theater bankaikino.ru but it was blocked
                   :(. But you can test the functionality of the player on the
                   Bankai page.
                 </p>
@@ -95,7 +95,6 @@ export default function AboutSection({ project }) {
           </li>
         </ul>
       </DivStyle>
-
       {/* <strong>
         <h3 style={{ marginBottom: "1rem" }}>Practice with forms</h3>
       </strong>
