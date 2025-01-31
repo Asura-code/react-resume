@@ -60,7 +60,7 @@ export default function CoruselSection() {
             <div>
               <AboutSection
                 style={contentStyle}
-                project={"Bankai"}
+                project={"Bankai extension"}
               ></AboutSection>
             </div>
           </Carousel>
