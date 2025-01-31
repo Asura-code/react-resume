@@ -12,10 +12,10 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@4
+        uses: actions/checkout@v3
 
       - name: Setup Node
-        uses: actions/setup-node@4
+        uses: actions/setup-node@v3
 
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
@@ -24,7 +24,7 @@ jobs:
         run: npm run build
 
       - name: Upload production-ready build files
-        uses: actions/upload-artifact@4
+        uses: actions/upload-artifact@v4
         with:
           name: production-files-ubuntu-latest
           path: ./dist
@@ -37,14 +37,14 @@ jobs:
 
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@4
+        uses: actions/download-artifact@v4
         with:
           path: ./dist
           pattern: production-files_*
           merge-multiple: true
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@4
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
