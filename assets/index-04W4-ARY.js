@@ -335,7 +335,7 @@ html body {
   button.slick-arrow.slick-prev:after {
     color: black;
   }
-`,zf={margin:0,height:"160px",color:"#fff",lineHeight:"160px",textAlign:"center",background:"white"};function wF(){return W.jsx(W.Fragment,{children:W.jsx(za,{style:zf,theme:{components:{Carousel:{colorBgContainer:"black",colorBgElevated:"red",colorIcon:"red",colorText:"black",arrowOffset:1}}},children:W.jsx(CF,{children:W.jsxs(Z4,{arrows:!0,infinite:!0,autoplay:!0,speed:1e3,autoplaySpeed:1e4,children:[W.jsx("div",{children:W.jsx(s1,{style:zf,project:"Bankai Kino"})}),W.jsx("div",{children:W.jsx(s1,{style:zf,project:"Bankai"})})]})})})})}function xF(){let e=window.location.href,t=e.indexOf("lol")!==-1;console.log(e),Mg();const[n,r]=u.useState(t?"bankai":"main");u.useState("");function i(){r("main"),a("")}u.useState();let[o,a]=u.useState(t?"4.jpg":"");const l=Li.div`
+`,zf={margin:0,height:"160px",color:"#fff",lineHeight:"160px",textAlign:"center",background:"white"};function wF(){return W.jsx(W.Fragment,{children:W.jsx(za,{style:zf,theme:{components:{Carousel:{colorBgContainer:"black",colorBgElevated:"red",colorIcon:"red",colorText:"black",arrowOffset:1}}},children:W.jsx(CF,{children:W.jsxs(Z4,{arrows:!0,infinite:!0,autoplay:!0,speed:1e3,autoplaySpeed:1e4,children:[W.jsx("div",{children:W.jsx(s1,{style:zf,project:"Bankai Kino"})}),W.jsx("div",{children:W.jsx(s1,{style:zf,project:"Bankai extension"})})]})})})})}function xF(){let e=window.location.href,t=e.indexOf("lol")!==-1;console.log(e),Mg();const[n,r]=u.useState(t?"bankai":"main");u.useState("");function i(){r("main"),a("")}u.useState();let[o,a]=u.useState(t?"4.jpg":"");const l=Li.div`
     background-image: url(${o});
     background-position: center center;
     background-repeat: no-repeat;
