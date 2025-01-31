@@ -14,11 +14,6 @@ export const ways = [
     description:
       'I have experience in web development, knowledge of the basics of programming in python, go and js. Understanding the basics of working with databases - experience working with postgresql',
   },
-  {
-    title: 'Projects: ',
-    description:
-      'https://bankaikino.ru/  , it was blocked :( , but you can use the functionality of the player on the Bankai page ',
-  },
 ]
 
 export const contacts = {

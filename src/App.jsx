@@ -20,6 +20,7 @@ import styled from "styled-components";
 import useInput from "./hooks/useInput";
 import Bankai from "./components/Bankai";
 import NewTabSection from "./components/NewTabSection";
+import CoruselSection from "./components/CoruselSection";
 
 export default function App() {
   let s = window.location.href;
@@ -112,8 +113,8 @@ export default function App() {
           {tab == "main" && (
             <>
               <div className="Main">
+                <CoruselSection></CoruselSection>
                 <Whoami />
-                <AboutSection></AboutSection>
                 <Contacts />
               </div>
             </>

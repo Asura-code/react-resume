@@ -11,6 +11,14 @@ const DivStyle = styled.div`
       transform: scale(1);
     }
   }
+  .container {
+    display: flex;
+    align-items: center; /* Вертикальное выравнивание по центру */
+  }
+
+  .image {
+    margin-right: 10px; /* Отступ между изображением и текстом */
+  }
 
   p {
     display: inline-block;
@@ -30,7 +38,7 @@ const DivStyle = styled.div`
   }
 `;
 
-export default function AboutSection() {
+export default function AboutSection({ project }) {
   const [name, setName] = useState("");
   const [reason, setReason] = useState("2");
   const [hasError, setHasError] = useState(false);
@@ -48,17 +56,42 @@ export default function AboutSection() {
 
   return (
     <section>
-      <strong>
-        <h3 style={{ marginBottom: "1rem" }}>What's going on here</h3>
-      </strong>
+      {project && (
+        <strong>
+          <h3 style={{ marginBottom: "1rem" }}>Project: {project}</h3>
+        </strong>
+      )}
       <DivStyle>
         <ul>
           <li>
-            <p>
-              I started learning react and decided to make smth like a resume as
-              my first project. So here I'm just practicing different things
-              that I'm learning
-            </p>
+            {project == "Bankai Kino" ? (
+              <div class="container">
+                <p class="text">
+                  I had an online movie theater bankaikino.ru but it was blocked
+                  :(. But you can test the functionality of the player on the
+                  Bankai page.
+                </p>
+                <img src="public/tenor2.gif" class="image" />
+              </div>
+            ) : (
+              <div class="container">
+                <p class="text">
+                  A browser extension that allows you to switch from the movie
+                  page on kinopoisk to a free player. You can download it{" "}
+                  <a
+                    href="https://github.com/Asura-code/bankai/tree/main"
+                    target="_blank"
+                  >
+                    on my github
+                  </a>
+                </p>
+                <img
+                  src="public/tenor3.gif"
+                  class="image"
+                  style={{ width: "400px", height: "225px" }}
+                />
+              </div>
+            )}
           </li>
         </ul>
       </DivStyle>
