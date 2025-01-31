@@ -10,9 +10,6 @@ const DivStyle = styled.div`
   button.slick-arrow.slick-next:before {
     color: black;
   }
-  button {
-    colr: "red";
-  }
 
   button.slick-arrow.prev-next {
     color: black;
