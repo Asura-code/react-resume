@@ -71,7 +71,7 @@ export default function AboutSection({ project }) {
                   :(. But you can test the functionality of the player on the
                   Bankai page.
                 </p>
-                <img src="public/tenor2.gif" class="image" />
+                <img src="tenor2.gif" class="image" />
               </div>
             ) : (
               <div class="container">
@@ -86,7 +86,7 @@ export default function AboutSection({ project }) {
                   </a>
                 </p>
                 <img
-                  src="public/tenor3.gif"
+                  src="tenor3.gif"
                   class="image"
                   style={{ width: "400px", height: "225px" }}
                 />
