@@ -26,10 +26,18 @@ export default function Bankai() {
   console.log("lol" + result);
 
   const [message, setMessage] = useState(redirect ? result : "");
+  const [placeholder, setPlaceholder] = useState("kinopoisk/imdb id or name:");
 
   const handleChange = (event) => {
     setMessage(event.target.value);
   };
+
+  function handleChangePlaceholderFocus() {
+    setPlaceholder("");
+  }
+  function handleChangePlaceholderBlur() {
+    setPlaceholder("kinopoisk/imdb id or name:");
+  }
 
   // модалка - перенести в отдельный компонент как не будет заебно
   //   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -48,13 +56,18 @@ export default function Bankai() {
       <div className="Bankai">
         <div className="text-field">
           <label className="text-field__label">
-            <p> Write kinopoisk/imdb id or name ↓</p>
+            <strong>
+              {" "}
+              <p> Write kinopoisk/imdb id or name ↓</p>{" "}
+            </strong>
           </label>
           <input
             onChange={handleChange}
+            onFocus={handleChangePlaceholderFocus}
+            onBlur={handleChangePlaceholderBlur}
             value={message}
             className="text-field__input"
-            placeholder="kinopoisk/imdb id or name:"
+            placeholder={placeholder}
             autocomplete="off"
           />{" "}
           <div style={{ display: "inline-block", paddingLeft: "50px" }}>

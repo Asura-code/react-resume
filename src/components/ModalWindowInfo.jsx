@@ -78,7 +78,7 @@ export default function ModalWindowInfo() {
           },
         }}
       >
-        <Button
+        {/* <Button
           onClick={showModal}
           style={{
             display: "inline-block",
@@ -89,7 +89,14 @@ export default function ModalWindowInfo() {
           }}
         >
           instruction
-        </Button>
+        </Button> */}
+
+        <img
+          src="voprosik.png"
+          alt="jkjdnn"
+          style={{ height: "calc(2.25rem + 2px)", cursor: "pointer" }}
+          onClick={showModal}
+        />
 
         <Modal
           footer={""}
