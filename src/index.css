@@ -149,6 +149,10 @@ p {
   border-left: 3px solid rgb(17, 65, 2)
 }
 
+/* .kinobox_player{
+  width: 100%;
+} */
+
 .control {
   border: 1px solid #ccc;
   border-radius: 5px;
