@@ -68,8 +68,11 @@ export default function AboutSection({ project }) {
               <div class="container">
                 <p class="text">
                   I had an online movie theater bankaikino.ru but it was blocked
-                  :(. But you can test the functionality of the player on the
-                  Bankai page.
+                  :(. But you can{" "}
+                  <a href="https://bankai.h1n.ru/" target="_blank">
+                    view the visual here
+                  </a>{" "}
+                  and test the functionality of the player on the Bankai page.
                 </p>
                 <img src="tenor2.gif" class="image" />
               </div>
