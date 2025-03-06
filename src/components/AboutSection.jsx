@@ -82,10 +82,10 @@ export default function AboutSection({ project }) {
                   A browser extension that allows you to switch from the movie
                   page on kinopoisk to a free player. You can download it{" "}
                   <a
-                    href="https://github.com/Asura-code/bankai/tree/main"
+                    href="https://chromewebstore.google.com/detail/bankai/bglaaddmckbbjbnfmcihokmpheamiakc?utm_source=item-share-cb"
                     target="_blank"
                   >
-                    on my github
+                    on chrome store
                   </a>
                 </p>
                 <img
