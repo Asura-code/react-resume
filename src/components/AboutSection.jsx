@@ -72,7 +72,10 @@ export default function AboutSection({ project }) {
                   <a href="https://bankai.h1n.ru/" target="_blank">
                     view the visual here
                   </a>{" "}
-                  and test the functionality of the player on the Bankai page.
+                  and test the functionality of the player on the{" "}
+                  <a href="https://bankaigo.ru/" target="_blank">
+                    bankaigo
+                  </a>
                 </p>
                 <img src="tenor2.gif" class="image" />
               </div>

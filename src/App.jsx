@@ -41,7 +41,7 @@ export default function App() {
   }
 
   let [isPc, setIsPC] = useState();
-  let [wallpaper, setWallpaper] = useState(!res ? "" : "4.jpg");
+  let [wallpaper, setWallpaper] = useState(!res ? "" : "");
 
   const DivStyle = styled.div`
     background-image: url(${wallpaper});
@@ -63,19 +63,7 @@ export default function App() {
   return (
     <>
       <DivStyle>
-        <div onClick={() => handleOnHeaderClick()}>
-          <Header />
-        </div>
-
         <main>
-          <div className="Tabs">
-            <NewTabSection
-              active={tab}
-              onChange2={(c) => setTab(c)}
-              onChange3={(c) => setWallpaper(c)}
-            ></NewTabSection>
-          </div>
-
           {/* {isMobileDevice() ? (
             <>
               <BurgerSection
@@ -113,6 +101,13 @@ export default function App() {
           {tab == "main" && (
             <>
               <div className="Main">
+                <div className="Tabs">
+                  <NewTabSection
+                    active={tab}
+                    onChange2={(c) => setTab(c)}
+                    onChange3={(c) => setWallpaper(c)}
+                  ></NewTabSection>
+                </div>
                 <CoruselSection></CoruselSection>
                 <Whoami />
                 <Contacts />
@@ -120,11 +115,29 @@ export default function App() {
             </>
           )}
 
-          {tab == "bankai" && <Bankai></Bankai>}
+          {tab == "bankai" && (
+            <>
+              <div className="Tabs">
+                <NewTabSection
+                  active={tab}
+                  onChange2={(c) => setTab(c)}
+                  onChange3={(c) => setWallpaper(c)}
+                ></NewTabSection>
+              </div>
+              <Bankai></Bankai>
+            </>
+          )}
 
           {tab == "effect" && (
             <>
               <div className="Bankai">
+                <div className="Tabs">
+                  <NewTabSection
+                    active={tab}
+                    onChange2={(c) => setTab(c)}
+                    onChange3={(c) => setWallpaper(c)}
+                  ></NewTabSection>
+                </div>
                 <EffectsSection />
                 <News></News>
                 <RandomAnime></RandomAnime>
