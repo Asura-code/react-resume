@@ -37,11 +37,17 @@ export default function App() {
 
   function handleOnHeaderClick() {
     setTab("main");
-    setWallpaper("");
+    setWallpaper(
+      "https://sun9-27.userapi.com/impf/g9veFBrarGdoQCfLzOgzVE5zRMyHvAF8v77wmQ/dHjBQG76Qjo.jpg?size=1920x768&quality=95&crop=0,115,2560,1022&sign=6d6f7f97bb168c46e069b7d9e17a508e&type=cover_group"
+    );
   }
 
   let [isPc, setIsPC] = useState();
-  let [wallpaper, setWallpaper] = useState(!res ? "" : "");
+  let [wallpaper, setWallpaper] = useState(
+    !res
+      ? ""
+      : "https://sun9-27.userapi.com/impf/g9veFBrarGdoQCfLzOgzVE5zRMyHvAF8v77wmQ/dHjBQG76Qjo.jpg?size=1920x768&quality=95&crop=0,115,2560,1022&sign=6d6f7f97bb168c46e069b7d9e17a508e&type=cover_group"
+  );
 
   const DivStyle = styled.div`
     background-image: url(${wallpaper});

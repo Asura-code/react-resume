@@ -166,12 +166,20 @@ p {
 @import "https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap";
 
 :root {
-  --color: rgb(63 63 63);
+  --color: rgb(94, 212, 189);
 }
 
 body {
   margin: 0;
   font-family: Poppins, sans-serif;
+}
+
+
+
+@keyframes typing {
+  from {
+    width: 0ch;
+  }
 }
 
 .parallax-container {
@@ -184,13 +192,30 @@ body {
   /*  this is where the magic happens:  */
   background-attachment: fixed;
 
-  background-image: url(https://i.pinimg.com/originals/91/78/6a/91786ab74fd16dd917a336b51a7060db.jpg);
+  background-image: url(https://sun9-27.userapi.com/impf/g9veFBrarGdoQCfLzOgzVE5zRMyHvAF8v77wmQ/dHjBQG76Qjo.jpg?size=1920x768&quality=95&crop=0,115,2560,1022&sign=6d6f7f97bb168c46e069b7d9e17a508e&type=cover_group);
   background-position: center;
   background-size: cover;
   color: var(--color);
   row-gap: 4rem;
 
   text-align: center;
+}
+.buffer2 {
+  width: 100%;
+  min-height: 25vh;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Kinopoisk_colored_logo_with_black_background_%282021-present%29.svg/1200px-Kinopoisk_colored_logo_with_black_background_%282021-present%29.svg.png);
+  background-position: center;
+}
+
+.reveal.active{
+  transform: translateX(0);
+  opacity: 1;
+}
+.reveal{
+  position: relative;
+  transform: translateX(-150px);
+  opacity: 0;
+  transition: .5s all ease;
 }
 
 /* .buffer {
@@ -217,7 +242,7 @@ h1 {
 }
 
 p {
-  max-width: 52ch;
+
   padding: 1em;
   line-height: 1.5;
 }

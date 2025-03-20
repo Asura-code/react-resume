@@ -14,6 +14,38 @@ export default function Bankai() {
     );
   }
 
+  const DivStyle = styled.div`
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: monospace;
+    }
+
+    body {
+      background: #0d1b2a;
+      overflow: hidden;
+      display: flex;
+      height: 100vh;
+      align-items: center;
+    }
+
+    h1 {
+      color: rgb(255, 255, 255);
+      font-size: 3rem;
+      width: 20ch;
+      text-wrap: nowrap;
+      overflow: hidden;
+      animation: typing 2s steps(20);
+    }
+
+    @keyframes typing {
+      from {
+        width: 0ch;
+      }
+    }
+  `;
+
   // let s = window.location.href;
   // let redirect = s.indexOf("lol") !== -1;
   // let res = s.indexOf("#");
@@ -108,8 +140,10 @@ export default function Bankai() {
       </div> */}
 
       <section className="parallax-container">
-        <h1>Bankai</h1>
-        <p>
+        <DivStyle>
+          <h1>Bankai</h1>
+        </DivStyle>
+        <p style={{ maxWidth: "52ch" }}>
           Browser extension for free movie viewing. You can see examples of how
           the extension works below
           <a
@@ -122,6 +156,7 @@ export default function Bankai() {
       </section>
 
       <CardSection
+        active={"reveal"}
         bufferImg="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Kinopoisk_colored_logo_with_black_background_%282021-present%29.svg/1200px-Kinopoisk_colored_logo_with_black_background_%282021-present%29.svg.png"
         imgLink="https://raw.githubusercontent.com/Asura-code/react-resume/refs/heads/main/public/bankai_kinopoisk.png"
         titleText="The extension works with kinopoisk"
@@ -133,10 +168,11 @@ export default function Bankai() {
             Bankai
           </a>
         }
-        bgLink="https://wallpapers.com/images/hd/white-pc-lu0qo2pvklxn65ts.jpg"
+        bgLink="https://2ch.hk/wp/src/77372/16660287613830.jpg"
       ></CardSection>
 
       <CardSection
+        active={"reveal"}
         bufferImg="https://i0.wp.com/jcatalan55.es/wp-content/uploads/2015/10/imdb-baner-scaled.jpeg?fit=2560%2C722&ssl=1"
         imgLink="https://github.com/Asura-code/react-resume/blob/main/public/bankai_imdb.png?raw=true"
         titleText="The extension works with imdb"
@@ -148,10 +184,11 @@ export default function Bankai() {
             Bankai
           </a>
         }
-        bgLink="https://get.wallhere.com/photo/drawing-white-monochrome-minimalism-lightbulb-text-logo-graphic-design-circle-brand-shape-line-number-screenshot-computer-wallpaper-font-211291.jpg"
+        bgLink="https://avatars.mds.yandex.net/i?id=ae492bf4746cc9d946f148320a22a8ad_l-5236810-images-thumbs&n=13"
       ></CardSection>
 
       <CardSection
+        active={"reveal"}
         bufferImg="https://sun1-26.userapi.com/impf/QENMKNdQT5-2iIbgJcfoezd15PfYqqrb0enXUw/wxEEwH21IXU.jpg?size=1920x768&quality=95&crop=132,0,1325,529&sign=d79b3bae6dc45d6a7fe2c051e015d44d&type=cover_group"
         imgLink="https://github.com/Asura-code/react-resume/blob/main/public/bankai_shikimori.png?raw=true"
         titleText="The extension works with shikimori"
@@ -163,7 +200,7 @@ export default function Bankai() {
             Bankai
           </a>
         }
-        bgLink="https://get.wallhere.com/photo/white-black-monochrome-logo-circle-Ubuntu-gray-fog-hand-shape-line-darkness-os-wing-screenshot-pc-atmospheric-phenomenon-computer-wallpaper-atmosphere-of-earth-black-and-white-monochrome-photography-705854.jpg"
+        bgLink="https://i.pinimg.com/originals/b0/3a/04/b03a04bdd98012e87cdb5a9673da0653.jpg"
       ></CardSection>
     </>
   );
