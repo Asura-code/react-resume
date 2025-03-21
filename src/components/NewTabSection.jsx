@@ -2,10 +2,9 @@ import { ConfigProvider, Tabs } from "antd";
 import { useState } from "react";
 
 export default function NewTabSection({ active, onChange2, onChange3 }) {
-  let wallpaper =
-    active == "bankai"
-      ? "https://i.pinimg.com/originals/ce/8d/b3/ce8db3b48e4ed95ecfeacd945a4a017a.png"
-      : "";
+  const wp =
+    "https://i.pinimg.com/originals/65/56/ca/6556ca0886a22948573c1845169e7a21.gif";
+  let wallpaper = active == "bankai" ? wp : "";
 
   const items = [
     {
@@ -23,11 +22,7 @@ export default function NewTabSection({ active, onChange2, onChange3 }) {
   ];
   const onClick = (key) => {
     onChange2(key);
-    onChange3(
-      key == "bankai"
-        ? "https://i.pinimg.com/originals/ce/8d/b3/ce8db3b48e4ed95ecfeacd945a4a017a.png"
-        : ""
-    );
+    onChange3(key == "bankai" ? wp : "");
   };
 
   return (

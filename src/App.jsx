@@ -35,19 +35,16 @@ export default function App() {
     setMessage(event.target.value);
   };
 
+  const wp =
+    "https://i.pinimg.com/originals/65/56/ca/6556ca0886a22948573c1845169e7a21.gif";
+
   function handleOnHeaderClick() {
     setTab("main");
-    setWallpaper(
-      "https://i.pinimg.com/originals/ce/8d/b3/ce8db3b48e4ed95ecfeacd945a4a017a.png"
-    );
+    setWallpaper(wp);
   }
 
   let [isPc, setIsPC] = useState();
-  let [wallpaper, setWallpaper] = useState(
-    !res
-      ? ""
-      : "https://i.pinimg.com/originals/ce/8d/b3/ce8db3b48e4ed95ecfeacd945a4a017a.png"
-  );
+  let [wallpaper, setWallpaper] = useState(!res ? "" : wp);
 
   const DivStyle = styled.div`
     background-image: url(${wallpaper});
