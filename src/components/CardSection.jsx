@@ -1,21 +1,9 @@
 import { Card } from "antd";
 const { Meta } = Card;
 import styled from "styled-components";
-
-function show() {
-  var reveal = document.querySelectorAll(".reveal");
-  for (var i = 1; i < reveal.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = reveal[i].getBoundingClientRect().top;
-
-    if (elementTop < windowHeight - 190) {
-      reveal[i].classList.add("active");
-    } else {
-      reveal[i].classList.remove("active");
-    }
-  }
-}
-window.addEventListener("scroll", show);
+import React, { useState, useEffect } from "react";
+import ScrollAnimation from "react-animate-on-scroll";
+import "animate.css";
 
 export default function CardSection({
   imgLink,
@@ -41,7 +29,18 @@ export default function CardSection({
       background-size: cover;
       background-image: url(${bgLink});
     }
+
+    .cardImg {
+      width: 100%;
+      border-radius: 0.3em;
+      background-position: center;
+      background-size: cover;
+    }
+    .zagolovok {
+      background-color: yellow;
+    }
   `;
+
   return (
     <>
       <h1 className="reveal" style={{ display: "none" }}>
@@ -58,23 +57,21 @@ export default function CardSection({
               justifyContent: "center",
             }}
           >
-            <section className={active}>
-              <Card
-                hoverable
-                style={{
-                  width: 1400,
-                }}
-                cover={<img alt="example" src={imgLink} />}
-              >
-                <Meta
+            <section className="card">
+              <ScrollAnimation animateIn="animate__animated animate__slideInLeft">
+                <h1 style={{ zIndex: "100" }} className="zagolovok">
+                  {titleText}
+                </h1>
+              </ScrollAnimation>
+              <ScrollAnimation animateIn="animate__animated animate__slideInRight">
+                {/* <Card
+                  hoverable
                   style={{
-                    display: "flex",
-                    textAlign: "center",
-                  }}
-                  title={titleText}
-                  description={descriptionText}
-                />
-              </Card>
+                    width: 1400,
+                  }} */}
+                <img alt="example" src={imgLink} className="cardImg" />
+                {/* ></Card> */}
+              </ScrollAnimation>
             </section>
           </div>
         </section>

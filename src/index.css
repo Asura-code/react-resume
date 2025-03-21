@@ -192,7 +192,7 @@ body {
   /*  this is where the magic happens:  */
   background-attachment: fixed;
 
-  background-image: url(https://sun9-27.userapi.com/impf/g9veFBrarGdoQCfLzOgzVE5zRMyHvAF8v77wmQ/dHjBQG76Qjo.jpg?size=1920x768&quality=95&crop=0,115,2560,1022&sign=6d6f7f97bb168c46e069b7d9e17a508e&type=cover_group);
+  background-image: url(https://i.pinimg.com/originals/ce/8d/b3/ce8db3b48e4ed95ecfeacd945a4a017a.png);
   background-position: center;
   background-size: cover;
   color: var(--color);
@@ -207,16 +207,8 @@ body {
   background-position: center;
 }
 
-.reveal.active{
-  transform: translateX(0);
-  opacity: 1;
-}
-.reveal{
-  position: relative;
-  transform: translateX(-150px);
-  opacity: 0;
-  transition: .5s all ease;
-}
+
+
 
 /* .buffer {
   width: 100%;
@@ -257,14 +249,14 @@ h3 {
 
 .card {
   display: flex;
-  max-width: 320px;
+  max-width: 1400px;
   flex-direction: column;
   align-items: center;
 
   padding-bottom: 1rem;
   border-radius: 0.5em;
 
-  background-color: white;
+  background-color: transparent;
   box-shadow: 0 29px 38px -15px rgb(0 0 0 / 43%);
 }
 

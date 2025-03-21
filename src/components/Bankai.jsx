@@ -1,11 +1,12 @@
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import KinoboxPlayer from "./KinoboxPlayer/KinoboxPlayer";
 import RandomAnime from "./RandomAnime";
 import { Button, Modal } from "antd";
 import ModalWindowInfo from "./ModalWindowInfo";
 import styled from "styled-components";
-import React from "react";
 import CardSection from "./CardSection";
+import ScrollAnimation from "react-animate-on-scroll";
+import "animate.css";
 
 export default function Bankai() {
   function isMobileDevice() {
@@ -46,113 +47,24 @@ export default function Bankai() {
     }
   `;
 
-  // let s = window.location.href;
-  // let redirect = s.indexOf("lol") !== -1;
-  // let res = s.indexOf("#");
-  // console.log("res: " + res);
-  // let result = "";
-  // for (let i = res + 4; i < 2000; i++) {
-  //   if (s[i] != "#") {
-  //     result += s[i];
-  //   } else {
-  //     break;
-  //   }
-  // }
-  // console.log("lol" + result);
-
-  // const [message, setMessage] = useState(redirect ? result : "");
-  // const [placeholder, setPlaceholder] = useState("kinopoisk/imdb id or name:");
-
-  // const handleChange = (event) => {
-  //   setMessage(event.target.value);
-  // };
-
-  // function handleChangePlaceholderFocus() {
-  //   setPlaceholder("");
-  // }
-  // function handleChangePlaceholderBlur() {
-  //   setPlaceholder("kinopoisk/imdb id or name:");
-  // }
-
-  // модалка - перенести в отдельный компонент как не будет заебно
-  //   const [isModalOpen, setIsModalOpen] = useState(false);
-  //   const showModal = () => {
-  //     setIsModalOpen(true);
-  //   };
-  //   const handleOk = () => {
-  //     setIsModalOpen(false);
-  //   };
-  //   const handleCancel = () => {
-  //     setIsModalOpen(false);
-  //   };
-
   return (
     <>
-      {/* <div className="Bankai">
-        <div className="text-field">
-          <label className="text-field__label">
-            <strong>
-              {" "}
-              <p> Write kinopoisk/imdb id or name ↓</p>{" "}
-            </strong>
-          </label>
-          <input
-            onChange={handleChange}
-            onFocus={handleChangePlaceholderFocus}
-            onBlur={handleChangePlaceholderBlur}
-            value={message}
-            className="text-field__input"
-            placeholder={placeholder}
-            autocomplete="off"
-          />{" "}
-          <div style={{ display: "inline-block", paddingLeft: "50px" }}>
-            <ModalWindowInfo></ModalWindowInfo>
-          </div>
-        </div>
-
-        <br></br>
-        {message || isMobileDevice() ? (
-          <div className="border">
-            <KinoboxPlayer kpId={message} />
-          </div>
-        ) : (
-          <div className="border">
-            <img src="tenor.gif" style={{ width: "845px", height: "475px" }} />
-          </div>
-        )}
-        <br></br> */}
-      {/* <EffectsSection></EffectsSection> */}
-
-      {/* <RandomAnime></RandomAnime> */}
-      {/* 
-        <br></br>
-
-        <div style={{ visibility: "hidden" }}>
-          <h1>Костыль</h1>
-          <h1>Костыль</h1>
-          <h1>Костыль</h1>
-          <h1>Костыль</h1>
-          <h1>Костыль</h1>
-          <h1>Костыль</h1>
-          <h1>Костыль</h1>
-          <h1>Костыль</h1>
-        </div>
-      </div> */}
-
       <section className="parallax-container">
         <DivStyle>
           <h1>Bankai</h1>
         </DivStyle>
-        <p style={{ maxWidth: "52ch" }}>
-          Browser extension for free movie viewing. You can see examples of how
-          the extension works below
-          <a
-            target="_blank"
-            href="https://chromewebstore.google.com/detail/bglaaddmckbbjbnfmcihokmpheamiakc?utm_source=item-share-cb"
-          >
-            and download it on chrome store.
-          </a>
-        </p>
+        <ScrollAnimation animateIn="animate__animated animate__bounce">
+          <p style={{ maxWidth: "52ch" }}>
+            Browser extension for free movie viewing. You can see examples of
+            how the extension works below
+            <a
+              target="_blank"
+              href="https://chromewebstore.google.com/detail/bglaaddmckbbjbnfmcihokmpheamiakc?utm_source=item-share-cb"
+            >
+              and download it on chrome store.
+            </a>
+          </p>
+        </ScrollAnimation>
       </section>
 
       <CardSection
@@ -184,7 +96,7 @@ export default function Bankai() {
             Bankai
           </a>
         }
-        bgLink="https://avatars.mds.yandex.net/i?id=ae492bf4746cc9d946f148320a22a8ad_l-5236810-images-thumbs&n=13"
+        bgLink="https://avatars.mds.yandex.net/i?id=9225a2d5e0686d98886e808b80c982de_l-10465270-images-thumbs&n=13"
       ></CardSection>
 
       <CardSection
