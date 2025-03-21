@@ -56,7 +56,7 @@ export default function Bankai() {
         <ScrollAnimation animateIn="animate__animated animate__bounce">
           <p style={{ maxWidth: "52ch" }}>
             Browser extension for free movie viewing. You can see examples of
-            how the extension works below
+            how the extension works below{" "}
             <a
               target="_blank"
               href="https://chromewebstore.google.com/detail/bglaaddmckbbjbnfmcihokmpheamiakc?utm_source=item-share-cb"

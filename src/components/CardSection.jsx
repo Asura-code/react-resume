@@ -13,12 +13,18 @@ export default function CardSection({
   bufferImg,
   active,
 }) {
+  function isMobileDevice() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    );
+  }
+
   const DivStyle = styled.div`
     .buffer {
-      width: 100%;
-      min-height: 25vh;
+      min-height: ${isMobileDevice() ? "5rem" : "15rem"};
       background-image: url(${bufferImg});
       background-position: center;
+      background-size: cover;
     }
 
     .parallax-container2 {
