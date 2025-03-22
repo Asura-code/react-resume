@@ -45,6 +45,59 @@ export default function Bankai() {
         width: 0ch;
       }
     }
+    .fixedFooter {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 1000;
+    }
+
+    .fixedFooter img {
+      width: 70px;
+      height: auto;
+      transition: transform 0.3s;
+    }
+
+    .fixedFooter:hover img {
+      transform: scale(1.1);
+    }
+  `;
+
+  const PStyle = styled.p`
+    @import url("https://fonts.googleapis.com/css?family=Source+Code+Pro");
+    p {
+      white-space: nowrap;
+      overflow: hidden;
+      font-family: "Source Code Pro", monospace;
+    }
+
+    /* Animation */
+    p {
+      animation: animated-text 3s steps(1000, end) 0s 1 normal both,
+        animated-cursor 600ms steps(29, end) infinite;
+    }
+
+    /* text animation */
+
+    @keyframes animated-text {
+      from {
+        width: 0;
+      }
+      to {
+        width: 2170px;
+      }
+    }
+
+    /* cursor animations */
+
+    @keyframes animated-cursor {
+      from {
+        border-right-color: transparent;
+      }
+      to {
+        border-right-color: transparent;
+      }
+    }
   `;
 
   return (
@@ -53,18 +106,21 @@ export default function Bankai() {
         <DivStyle>
           <h1>Bankai</h1>
         </DivStyle>
-        <ScrollAnimation animateIn="animate__animated animate__bounce">
-          <p style={{ maxWidth: "52ch" }}>
-            Browser extension for free movie viewing. You can see examples of
-            how the extension works below{" "}
+        {/* <ScrollAnimation animateIn="animate__animated animate__bounce"> */}
+        <PStyle>
+          <p>
+            Browser extension for free movie viewing. <br></br> You can see
+            examples of how the extension works below <br></br> and download it
+            on{" "}
             <a
               target="_blank"
               href="https://chromewebstore.google.com/detail/bglaaddmckbbjbnfmcihokmpheamiakc?utm_source=item-share-cb"
             >
-              and download it on chrome store.
+              chrome store.
             </a>
           </p>
-        </ScrollAnimation>
+        </PStyle>
+        {/* </ScrollAnimation> */}
       </section>
 
       <CardSection
@@ -114,6 +170,20 @@ export default function Bankai() {
         }
         bgLink="https://i.pinimg.com/originals/b0/3a/04/b03a04bdd98012e87cdb5a9673da0653.jpg"
       ></CardSection>
+      <DivStyle>
+        <footer>
+          <a
+            href="https://chromewebstore.google.com/detail/bglaaddmckbbjbnfmcihokmpheamiakc?utm_source=item-share-cb"
+            target="_blank"
+            className="fixedFooter"
+          >
+            <img
+              src="https://www.axolabs.com/media/download_symbol.png"
+              alt="download"
+            ></img>
+          </a>
+        </footer>
+      </DivStyle>
     </>
   );
 }

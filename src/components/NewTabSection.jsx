@@ -32,9 +32,9 @@ export default function NewTabSection({ active, onChange2, onChange3 }) {
           components: {
             Tabs: {
               inkBarColor: "red",
-              colorText: "black",
+              colorText: "rgb(128,0,128)",
               colorBorderSecondary: "black",
-              itemSelectedColor: "black",
+              itemSelectedColor: "rgb(203, 5, 203)",
             },
           },
         }}
