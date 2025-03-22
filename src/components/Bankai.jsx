@@ -136,7 +136,7 @@ export default function Bankai() {
             Bankai
           </a>
         }
-        bgLink="public/phoneKinopoisk.png"
+        bgLink="phoneKinopoisk.png"
       ></CardSection>
 
       <CardSection
@@ -152,7 +152,7 @@ export default function Bankai() {
             Bankai
           </a>
         }
-        bgLink="public/phoneImdb.png"
+        bgLink="phoneImdb.png"
       ></CardSection>
 
       <CardSection
@@ -168,7 +168,7 @@ export default function Bankai() {
             Bankai
           </a>
         }
-        bgLink="public/phoneShikimori.png"
+        bgLink="phoneShikimori.png"
       ></CardSection>
       <DivStyle>
         <footer>
