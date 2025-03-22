@@ -136,7 +136,7 @@ export default function Bankai() {
             Bankai
           </a>
         }
-        bgLink="https://2ch.hk/wp/src/77372/16660287613830.jpg"
+        bgLink="public/phoneKinopoisk.png"
       ></CardSection>
 
       <CardSection
@@ -152,7 +152,7 @@ export default function Bankai() {
             Bankai
           </a>
         }
-        bgLink="https://avatars.mds.yandex.net/i?id=9225a2d5e0686d98886e808b80c982de_l-10465270-images-thumbs&n=13"
+        bgLink="public/phoneImdb.png"
       ></CardSection>
 
       <CardSection
@@ -168,7 +168,7 @@ export default function Bankai() {
             Bankai
           </a>
         }
-        bgLink="https://i.pinimg.com/originals/b0/3a/04/b03a04bdd98012e87cdb5a9673da0653.jpg"
+        bgLink="public/phoneShikimori.png"
       ></CardSection>
       <DivStyle>
         <footer>
