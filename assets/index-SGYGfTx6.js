@@ -373,6 +373,8 @@ html body {
       right: 20px;
       bottom: 20px;
       z-index: 1000;
+      animation: rollIn;
+      animation-duration: 2s;
     }
 
     .fixedFooter img {
@@ -382,6 +384,8 @@ html body {
     }
 
     .fixedFooter:hover img {
+      animation: flip;
+      animation-duration: 2s;
       transform: scale(1.1);
     }
   `,t=ar.p`
