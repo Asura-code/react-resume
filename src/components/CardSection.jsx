@@ -37,10 +37,29 @@ export default function CardSection({
     }
 
     .cardImg {
+      border-radius: 1.5em;
       width: 100%;
-      border-radius: 0.3em;
-      background-position: center;
-      background-size: cover;
+      aspect-ratio: 16/9;
+      overflow: hidden;
+      display: grid;
+      grid-template-areas: "stack";
+      // border-radius: 0.3em;
+      // background-position: center;
+      // background-size: cover;
+    }
+    .cardImg > * {
+      grid-area: stack;
+    }
+    .cardImg > figcaption {
+      display: grid;
+      align-items: end;
+      padding: 1.5rem 2rem;
+      background-image: linear-gradient(
+        to bottom,
+        rgb(33 44 55 / 0),
+        rgb(33 44 55 / 0),
+        rgb(0 51 102 / 0.3)
+      );
     }
     .zagolovok {
       background-color: yellow;
@@ -49,9 +68,6 @@ export default function CardSection({
 
   return (
     <>
-      <h1 className="reveal" style={{ display: "none" }}>
-        go
-      </h1>
       <DivStyle>
         <section className="buffer"></section>
         <section className="parallax-container2">
@@ -64,18 +80,23 @@ export default function CardSection({
             }}
           >
             <section className="card">
-              <ScrollAnimation animateIn="animate__animated animate__slideInLeft">
+              {/* <ScrollAnimation animateIn="animate__animated animate__slideInLeft">
                 <h1 style={{ zIndex: "100" }} className="zagolovok">
                   {titleText}
                 </h1>
-              </ScrollAnimation>
+              </ScrollAnimation> */}
               <ScrollAnimation animateIn="animate__animated animate__slideInRight">
                 {/* <Card
                   hoverable
                   style={{
                     width: 1400,
                   }} */}
-                <img alt="example" src={imgLink} className="cardImg" />
+                <figure className="cardImg">
+                  <img alt="example" src={imgLink} className="cardImg" />
+                  <figcaption style={{ color: "white" }}>
+                    <h1>{titleText}</h1>
+                  </figcaption>
+                </figure>
                 {/* ></Card> */}
               </ScrollAnimation>
             </section>
