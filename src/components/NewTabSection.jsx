@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export default function NewTabSection({ active, onChange2, onChange3 }) {
   const wp =
-    "https://i.pinimg.com/originals/65/56/ca/6556ca0886a22948573c1845169e7a21.gif";
+    "linear-gradient(to bottom right,rgb(19, 54, 177), #4d9dff, #1E3A8A);";
   let wallpaper = active == "bankai" ? wp : "";
 
   const items = [
